@@ -1,6 +1,5 @@
 package codekata.babylon.com.codekata
 
-import com.nhaarman.mockito_kotlin.mock
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -26,7 +25,7 @@ class CheckoutTest {
     }
 
     private fun price(items: CharSequence): Int {
-        val checkout: Checkout = mock()
+        val checkout: Checkout = SupermarketCheckout()
         items.forEach { checkout.scan(it) }
         return checkout.total()
     }
