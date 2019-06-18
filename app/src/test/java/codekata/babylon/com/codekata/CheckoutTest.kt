@@ -50,5 +50,7 @@ class CheckoutTest {
 
     @Test
     fun total_isCorrect_for_DABABA() = assertEquals(190, price("DABABA"))
-
+    
+    @Test
+    fun total_isCorrect_for_DBBAAABBAAA() = assertEquals(365, price("DBABAABAABA"))
 }
